@@ -1,0 +1,28 @@
+.row{
+    padding: 10px;
+}
+.btns{
+    width: 120px;
+    height: 40px;
+    
+}
+.btns-group{
+    display:flex;
+    flex-direction: row;
+    gap: 10%;
+    margin-top: 5%; 
+}
+
+
+
+@media(max-width: 780px){
+    #logo-simulacao{
+        display: none;
+    }
+}
+
+/* @media(max-width: 930px){
+    #logo-simulacao{
+        display: none;
+    }
+} */

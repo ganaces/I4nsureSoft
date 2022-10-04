@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Cadastro</h1>
+        </header>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">CPF</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">CNPJ</label>
+        </div>
+        <section id="formulario">
+            <form class="row g-3" action="#" method="get">
+                <div class="col-md-4">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" minlength="3" maxlength="15" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="sobrenome" class="form-label">Sobrenome</label>
+                    <input type="text" class="form-control" id="sobrenome" name="sobrenome" minlength="3" maxlength="30" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" class="form-control" id="cpf" name="cpf" minlength="11" maxlength="11" pattern="[0-9]{11}" placeholder="somente números"
+                        required onblur="formataCPF(this)">
+                </div>
+                <div class="col-md-3">
+                    <label for="identidade" class="form-label">Identidade</label>
+                    <input type="text" class="form-control" id="identidade" name="identidade" minlength="12" maxlength="12" pattern="[0-9]{9}"
+                        placeholder="somente números" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="data" class="form-label">Data de Nascimento</label>
+                    <input type="date" class="form-control" id="data" name="data" required>
+                </div>
+                <div class="col-md-1">
+                    <label for="idade" class="form-label">Idade</label>
+                    <input type="number" class="form-control" id="idade" name="idade" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="telefone" class="form-label">Telefone/Celular</label>
+                    <input type="text" class="form-control" id="telefone" name="telefone" minlength="14" maxlength="14" pattern="[0-9]{11}" placeholder="somente números"
+                        required>
+                </div>
+                <div class="col-md-4">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" minlength="10" maxlength="30" required>
+                </div>
+               <h2>Endereço</h2>
+                <div class="col-md-2">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" class="form-control" id="cep" name="cep" minlength="9" maxlength="9" placeholder="somente números" required
+                        onblur="pesquisacep(this.value)">
+                </div>
+                <div class="col-md-6">
+                    <label for="rua" class="form-label">Rua</label>
+                    <input type="text" class="form-control" id="rua" name="rua" minlength="3" maxlength="100" required>
+                </div>
+                <div class="col-md-1">
+                    <label for="numero" class="form-label">Número</label>
+                    <input type="number" class="form-control" id="numero" name="numero" minlength="1" maxlength="5" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="complemento" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" id="complemento" name="complemento" minlength="0" maxlength="30" required>
+                </div>
+                <div class="col-md-2">
+                    <label for="bairro" class="form-label">Bairro</label>
+                    <input type="text" class="form-control" id="bairro" name="bairro" minlength="5" maxlength="25" required>
+                </div>
+                <div class="col-md-3">
+                    <label for="cidade" class="form-label">Cidade</label>
+                    <input type="text" class="form-control" id="cidade" name="cidade" minlength="8" maxlength="25" required>
+                </div>
+                <div class="col-md-1">
+                    <label for="estado" class="form-label">Estado</label>
+                    <select name="uf" id="uf" class="form-select">
+                        <option value=""></option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        <option value="ES">ES</option>
+                    </select>
+                </div>
+                
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <button type="reset" class="btn btn-danger">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</body>
+
+</html>
